@@ -6,6 +6,8 @@
 // In this lab I gained some experience with working with local storage and 
 // it kinda gave me some ideas on how chat messaging works (though it's more complex than this).
 
+// I also learned on retrieving and parsing an object from local storage to show up on another page.
+
 document.addEventListener('DOMContentLoaded', function () {
     // Title
     document.title = userMessages.headerTitle;
