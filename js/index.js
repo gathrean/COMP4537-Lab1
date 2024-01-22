@@ -16,21 +16,26 @@ document.addEventListener('DOMContentLoaded', function () {
     // Making the nav and ul elements
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
+    ul.style.listStyleType = 'none'; // Remove bullet points
 
-    // Writer link
+    // Writer button
     const writerLi = document.createElement('li');
-    const writerAnchor = document.createElement('a');
-    writerAnchor.href = 'writer.html';
-    writerAnchor.textContent = userMessages.writerHeader;
-    writerLi.appendChild(writerAnchor);
+    const writerButton = document.createElement('button');
+    writerButton.textContent = userMessages.writerHeader;
+    writerButton.addEventListener('click', function () {
+        window.location.href = 'writer.html';
+    });
+    writerLi.appendChild(writerButton);
     ul.appendChild(writerLi);
 
-    // Reader link
+    // Reader button
     const readerLi = document.createElement('li');
-    const readerAnchor = document.createElement('a');
-    readerAnchor.href = 'reader.html';
-    readerAnchor.textContent = userMessages.readerHeader;
-    readerLi.appendChild(readerAnchor);
+    const readerButton = document.createElement('button');
+    readerButton.textContent = userMessages.readerHeader;
+    readerButton.addEventListener('click', function () {
+        window.location.href = 'reader.html';
+    });
+    readerLi.appendChild(readerButton);
     ul.appendChild(readerLi);
 
     // Append ul to nav
