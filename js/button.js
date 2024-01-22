@@ -1,3 +1,5 @@
+import { USER_MESSAGES } from './lang/messages/en/user.js';
+
 class Button {
     constructor(label, destination) {
         this.label = label;
@@ -14,10 +16,4 @@ class Button {
     }
 }
 
-// Create buttons
-const writerButton = new Button('Go to Writer', 'writer.html');
-const readerButton = new Button('Go to Reader', 'reader.html');
-
-// Render buttons
-writerButton.render();
-readerButton.render();
+export { Button };
