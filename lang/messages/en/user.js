@@ -4,4 +4,6 @@ const userMessages = {
     writerHeader: "Writer",
     readerButtonLabel: "Go to Reader",
     readerHeader: "Reader",
+    retrievalTime: "Last retrieved at: ",
+    homeButtonLabel: "Home",
 };

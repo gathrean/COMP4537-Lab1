@@ -20,7 +20,8 @@ function retrieveNotes() {
 // Function to update the last retrieved time display
 function updateLastRetrievedTime() {
     const now = new Date().toLocaleTimeString();
-    document.getElementById('retrievalTime').textContent = `Last retrieved at: ${now}`;
+    const retrievalTimeElement = document.getElementById('retrievalTime');
+    retrievalTimeElement.textContent = userMessages.retrievalTime + now;
 }
 
 // Retrieve and display notes every 2 seconds
@@ -28,3 +29,17 @@ setInterval(retrieveNotes, 2000);
 
 // Initial retrieval
 retrieveNotes();
+
+// Function to handle home button click
+function goToHome() {
+    location.href = 'index.html';
+}
+
+// Set home button label
+const homeButton = document.querySelector('footer button');
+homeButton.textContent = userMessages.homeButtonLabel;
+
+console.log("Home Button Label:", homeButton.textContent); // Add this line for debugging
+
+// Attach click event to home button
+homeButton.addEventListener('click', goToHome);
