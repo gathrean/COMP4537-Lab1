@@ -35,7 +35,7 @@ function showNotes() {
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
         removeButton.addEventListener('click', () => {
-            removeNote();
+            removeNote(index);
         });
 
         notesBox.appendChild(textArea);
@@ -50,7 +50,7 @@ addNotesButton.addEventListener('click', () => {
 });
 
 // Function to remove a note
-function removeNote() {
+function removeNote(index) {
     notes.splice(index, 1);
     showNotes();
     saveNotes();
