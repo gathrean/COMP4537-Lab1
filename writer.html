@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <title>Writer</title>
-</head>
-<body>
-    <h1>Writer</h1>
-    <button onclick="window.location.href='index.html'">Go to Home</button>
-    <button onclick="window.location.href='reader.html'">Go to Reader</button>
+
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="js/writer.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Writer</h1>
+        <div id="saveTime">Last saved at: --:--:--</div>
+    </header>
+
+    <section id="notes-box">
+        <!-- Notes will appear here -->
+    </section>
+
+    <button id="add-notes-button">Add Note</button>
+
+    <footer>
+        <button onclick="location.href='index.html'">Back</button>
+    </footer>
 </body>
+
 </html>

@@ -1,3 +1,8 @@
+// DISCLOSURE: I've used ChatGPT to get started with the following code, 
+// and I've fixed and tweaked it to make it work for this project along the way.
+
+// Along the way I've learned: 
+
 document.addEventListener('DOMContentLoaded', function () {
     // Title
     document.title = userMessages.headerTitle;
