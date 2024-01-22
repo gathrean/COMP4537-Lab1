@@ -19,7 +19,7 @@ function renderNotes(notes) {
 }
 
 // Function to retrieve and display notes
-function retrieveNotes() {
+function getNotes() {
     const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
     renderNotes(savedNotes);
     updateLastRetrievedTime();
@@ -47,7 +47,7 @@ function goToHome() {
 const homeButton = document.querySelector('footer button');
 homeButton.textContent = userMessages.homeButtonLabel;
 
-console.log("Home Button Label:", homeButton.textContent); // Add this line for debugging
+console.log("Home Button Label:", homeButton.textContent);
 
 // Attach click event to home button
 homeButton.addEventListener('click', goToHome);
