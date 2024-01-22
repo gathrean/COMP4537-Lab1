@@ -14,7 +14,7 @@ const addNotesButton = document.getElementById('add-notes-button');
 let notes = [];
 
 // Load existing notes from local storage
-window.onload = function() {
+window.onload = function () {
     const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
     notes = savedNotes.map(note => new Note(note.content));
     showNotes();
@@ -25,12 +25,14 @@ window.onload = function() {
 function showNotes() {
     notesBox.innerHTML = '';
     notes.forEach((note, index) => {
+        const noteContainer = document.createElement('div'); // Create a container for each note
+
         const textArea = document.createElement('textarea');
         textArea.value = note.content;
         textArea.addEventListener('input', (e) => {
             notes[index].content = e.target.value;
             saveNotes();
-        })
+        });
 
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
@@ -38,8 +40,10 @@ function showNotes() {
             removeNote(index);
         });
 
-        notesBox.appendChild(textArea);
-        notesBox.appendChild(removeButton);
+        noteContainer.appendChild(textArea);
+        noteContainer.appendChild(removeButton);
+
+        notesBox.appendChild(noteContainer);
     });
 }
 
